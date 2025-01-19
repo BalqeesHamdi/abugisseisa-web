@@ -1,101 +1,113 @@
-import Image from "next/image";
-
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [section, setSection] = useState('')
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div className='text-lg'>
+      <div className="relative h-screen bg-[url('/img/background.jpg')] bg-cover bg-center">
+        <div className="absolute inset-0 h-screen  bg-black bg-opacity-50"></div>
+        <main className="flex flex-col text-white items-start justify-center h-full mx-auto max-w-screen-2xl space-y-24 px-18 py-12">
+          <div className="z-10 space-y-12" >
+            <h1 className="w-9/12 text-6xl">Empowering Businesses with Expert Legal and Strategic Business Consultancy</h1>
+            <p className="text-2xl w-11/12">Based on <span>Sudanese family heritage in Sharia</span> (islamic
+              law) principles and jurisprudence, we provide Islamic finance advisory, Auditing services and offer
+              comprehensive solutions tailored for Islamic institutions.</p>
+          </div>
+        </main>
+      </div>
+      <div className="grid grid-cols-6 mx-auto max-w-screen-2xl px-18">
+        <Image
+          width={800}
+          height={800}
+          src="/img/about_the_company.jpg"
+          className="mr-2 h-auto col-span-3 w-3/4 -mt-36 z-10 shadow-md"
+          alt=""
+        />
+        <div className="space-y-12 col-span-3 flex flex-col justify-center">
+          <h1 className='font-extralight text-2xl text-primary-dark'>About the Company</h1>
+          <h1 className='text-4xl'>Over 40 years to the field of Islamic banking, becoming a trusted advisor since the 1970s</h1>
+          <p>Abugisseisa Consultancy establishment based on Sudanese family heritage in Sharia (islamic law) principles and jurisprudence. In the 1930s, our founder Sheikh Abdel Majid Abugisseisa served as a Shariah (Islamic law) court judge and his last status was chief justice of Sharia courts ( Grand Cadi) . Following his lead, his son dedicated over 40 years to the field of Islamic banking, becoming a trusted advisor since the 1970s. Today, grandson of Abdel Majid, who is a Sharia advisor holder of AAIOFI Islamic finance accounting and advisory certification jointly founded Abu gisseisa Consultancy. With the grandson vision and the son expertise and qualification, our consultancy continues to uphold the legacy of integrity and excellence established by our family heritage.</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </div>
+      <div className="mx-auto max-w-screen-2xl px-18 py-44 space-y-12">
+        <h1 className='font-extralight text-2xl text-primary-dark'>Establishments & Contributions</h1>
+        <h1 className='text-4xl'>Our Chief Sharia Controller Initiatives</h1>
+        <div className="content centered half_hight grid grid-cols-3 gap-12 divide-x-2">
+          <div>
+            <h1 className='text-4xl mb-6 text-primary-dark'>1997-2001</h1>
+            <p>Contributed to the Establishment of ADIB (Abu Dhabi Islamic Bank)</p>
+          </div>
+          <div className='pl-12'>
+            <h1 className='text-4xl mb-6 text-primary-dark'>1991-1997</h1>
+            <p>Contributed to the Improvement and Redrafting of Dubai Islamic Bank Finance Products</p>
+          </div>
+          <div className='pl-12'>
+            <h1 className='text-4xl mb-6 text-primary-dark'>2001-2015</h1>
+            <p>Structured and Established Islamic Banking Division at ARBIFT Group (AL MASRAF BANK)</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative h-auto py-44">
+        <div className="absolute inset-0 bg-cover bg-bottom bg-[url('/img/paperwork.jpg')]"></div>
+
+        <div className="absolute inset-0 items-center flex md:py-44 text-white bg-gradient-to-r from-primary-light via-primary-dark to-transparent"></div>
+
+        <div className="relative z-10 flex justify-center items-center h-full text-white">
+          <div className="mx-auto max-w-screen-2xl px-18 space-y-12 grid grid-cols-3 gap-20">
+            <div className='space-y-12 col-span-2'>
+              <h1 className='font-extralight text-2xl'>Our Services</h1>
+              <h1 className='text-4xl w-3/5'>Designed to assist clients in navigating the complexities of Islamic finance </h1>
+              <p>while ensuring compliance and ethical practices. From consultation and Auditing to training and participatory engagement, we strive to support the growth and development of Islamic finance globally. With our commitment to excellence, we aim to be a trusted partner to our clients in achieving success in the Islamic finance sector.</p>
+              <Link href={"/"} className='hover:text-black'>Read More</Link>
+            </div>
+            <ul className='text-xl divide-y-2 w-3/4 col-span-1'>
+              <li className='py-4'>Legal Consultations</li>
+              <li className='py-4'>Business and Company Formation Consultancy</li>
+              <li className='py-4'>Islamic Finance and Banking Expertise</li>
+              <li className='py-4'>Training and Development Programs</li>
+              <li className='pt-4'>Specialized Translation Services</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className='mx-auto max-w-screen-2xl px-18 pt-44 pb-80 space-y-12 flex flex-col'>
+      <h1 className='font-extralight text-2xl text-primary-dark'>Associations</h1>
+      <h1 className='text-4xl'>Trusted by</h1>
+      <div className='grid grid-cols-4 items-center'>
+      <Image
+          width={150}
+          height={150}
+          src="/img/image001.jpg"
+          className="grayscale hover:grayscale-0 h-auto w-1/2 col-span-1 m-auto"
+          alt=""
+        />
+         <Image
+          width={150}
+          height={150}
+          src="/img/SNDB Logo.pdf.png"
+          className="grayscale hover:grayscale-0 h-auto  w-1/2 col-span-1 m-auto"
+          alt=""
+        />
+         <Image
+          width={150}
+          height={150}
+          src="/img/UNEP logo (1).jpg"
+          className="grayscale hover:grayscale-0 h-auto  w-1/2 col-span-1 m-auto"
+          alt=""
+        />
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          width={150}
+          height={150}
+          src="/img/YNO-LOGOs.pdf.png"
+          className="grayscale hover:grayscale-0 h-auto  w-1/2 col-span-1 m-auto"
+          alt=""
+        />
+      </div>
+      </div>
     </div>
   );
 }
