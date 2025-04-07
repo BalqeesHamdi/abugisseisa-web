@@ -22,8 +22,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative  bg-cover`}
       >
+        {/* bg-[url('/img/lines.jpg')] */}
         <Header/>
         {children}
         <Footer/>

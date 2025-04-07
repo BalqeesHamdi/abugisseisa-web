@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   return (
-    <header className="p-4 backdrop-blur  text-white absolute top-0 left-0 w-full z-20 bg-transparent text-white px-4 py-8 flex justify-between items-center border-b-2">
+    <header className={pathname == "/" ? "p-4 backdrop-blur  text-white absolute top-0 left-0 w-full z-20 bg-transparent text-white px-4 py-8 flex justify-between items-center border-b-2":"p-4 backdrop-blur  text-white absolute top-0 left-0 w-full z-20 bg-black-50 text-white px-4 py-8 flex justify-between items-center border-b-2"}>
       <div className="container mx-auto flex h-16 items-center justify-between">
         <Link
           href="/"
@@ -60,18 +60,17 @@ const Header = () => {
             </Link>
           </li>
           <li className="flex-col">
-            <p
-              onMouseEnter={() => setShowDropdown('read')}
-              onClick={() => setShowDropdown('read')}
-              className="flex items-center p-4"
+            <Link
+               href={"/initiatives"}
+               className={classNames('flex items-center p-4', pathname === '/initiatives' ? 'active' : '')}
             >
               Initiatives
-            </p>
+            </Link>
           </li>
 
           <li className="flex-col">
             <Link
-              href={"/Services"}
+              href={"/services"}
               className="flex items-center p-4"
             >
               Services
