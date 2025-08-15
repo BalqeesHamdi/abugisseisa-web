@@ -71,19 +71,18 @@ const Header = () => {
           <li className="flex-col">
             <Link
               href={"/services"}
-              className="flex items-center p-4"
+              className={classNames('flex items-center p-4', pathname === '/services' ? 'active' : '')}
             >
               Services
             </Link>
           </li>
           <li className="flex-col">
-            <p
-              onMouseEnter={() => setShowDropdown('read')}
-              onClick={() => setShowDropdown('read')}
-              className="flex items-center p-4"
+          <Link
+              href={"/team"}
+              className={classNames('flex items-center p-4', pathname === '/team' ? 'active' : '')}
             >
               Management Team
-            </p>
+            </Link>
           </li>
           <li className="flex-col">
             <Link

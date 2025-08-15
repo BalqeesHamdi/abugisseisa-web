@@ -90,3 +90,11 @@ body {
   content: "–";
   margin-right: 0.5em;
 }
+
+.list-style{
+  padding-left:14px;
+}
+
+ol li {
+    margin-bottom: 8px;
+}
