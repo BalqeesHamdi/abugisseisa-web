@@ -4,7 +4,6 @@ import Image from 'next/image'
 const page = () => {
     const [show, setShow] = useState('issam')
     const [showAll, setShowAll] = useState(false);
-
     const qualifications = [
         "LLB, Dip-Law, LLM: Dedicated Legal Advisor with high-level Sudanese and U.K academic and professional qualification plus over 40 years of work experience in the Sudan and UAE.",
         "Master of Laws (LLM) in English Legal System, University of Bristol, Bristol, UK, 1985.",
